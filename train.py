@@ -86,7 +86,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 model = NeuralNet(input_size, hidden_size, output_size).to(device)
 
-# Loss and optimizer
+
 criterion = nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 
@@ -102,7 +102,7 @@ for epoch in range(num_epochs):
         # labels = torch.max(labels, 1)[1]
         loss = criterion(outputs, labels)
         
-        # Backward and optimize
+
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()

@@ -7,13 +7,13 @@ This gives 2 deployment options:
 - Serve only the Flask prediction API. The used html and javascript files can be included in any Frontend application (with only a slight modification) and can run completely separate from the Flask App then.
 
 ## Initial Setup:
-This repo currently contains the starter files.
+This repo currently contains the starter file.
 
 Clone repo and create a virtual environment
 ```
 $ git clone https://github.com/python-engineer/chatbot-deployment.git
 $ cd chatbot-deployment
-$ python3 -m venv venv
+$ python -m venv venv
 $ . venv/bin/activate
 ```
 Install dependencies
