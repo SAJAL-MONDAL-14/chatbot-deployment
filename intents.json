@@ -2,83 +2,593 @@
   "intents": [
     {
       "tag": "greeting",
-      "patterns": [
-        "Hi",
-        "Hey",
-        "How are you",
-        "Is anyone there?",
-        "Hello",
-        "Good day"
-      ],
-      "responses": [
-        "Hey :-)",
-        "Hello, thanks for visiting",
-        "Hi there, what can I do for you?",
-        "Hi there, how can I help?"
-      ]
+      "patterns": ["Hi", "Hello", "Namaste", "Tashi Delek", "Good day"],
+      "responses": ["Hello! Would you like to know about a monastery in Sikkim?", "Hi there 👋 Ask me about monasteries, their history, or location.", "Namaste 🙏 Which monastery would you like to explore?"]
     },
     {
       "tag": "goodbye",
-      "patterns": ["Bye", "See you later", "Goodbye"],
-      "responses": [
-        "See you later, thanks for visiting",
-        "Have a nice day",
-        "Bye! Come back again soon."
-      ]
+      "patterns": ["Bye", "See you later", "Goodbye", "Catch you later"],
+      "responses": ["Goodbye! Hope you visit a monastery soon.", "See you later, keep exploring Sikkim’s monasteries.", "Tashi Delek! Come back if you want to learn more."]
     },
     {
       "tag": "thanks",
-      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
-      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Great info"],
+      "responses": ["You’re welcome 🙏", "Happy to help with your monastery search!", "My pleasure — Sikkim’s monasteries are truly special."]
+    },
+
+    {
+      "tag": "monastery_amba_mamring_monastery",
+      "patterns": ["Tell me about Amba Mamring Monastery", "Where is Amba Mamring Monastery?", "When was Amba Mamring Monastery built?"],
+      "responses": ["Amba Mamring Monastery is in East Sikkim. Established: 1929. More: https://en.wikipedia.org/wiki/Amba_Mamring_Monastery", "Amba Mamring Monastery — district: East Sikkim; established: 1929. See: https://en.wikipedia.org/wiki/Amba_Mamring_Monastery"]
     },
     {
-      "tag": "items",
-      "patterns": [
-        "Which items do you have?",
-        "What kinds of items are there?",
-        "What do you sell?"
-      ],
-      "responses": [
-        "We sell coffee and tea",
-        "We have coffee and tea"
-      ]
+      "tag": "monastery_bakcham_monastery",
+      "patterns": ["Tell me about Bakcham Monastery", "Where is Bakcham Monastery?", "When was Bakcham Monastery built?"],
+      "responses": ["Bakcham Monastery is in East Sikkim. Established: 1966. More: https://en.wikipedia.org/wiki/Bakcham_Monastery", "Bakcham Monastery — district: East Sikkim; established: 1966. See: https://en.wikipedia.org/wiki/Bakcham_Monastery"]
     },
     {
-      "tag": "payments",
-      "patterns": [
-        "Do you take credit cards?",
-        "Do you accept Mastercard?",
-        "Can I pay with Paypal?",
-        "Are you cash only?"
-      ],
-      "responses": [
-        "We accept VISA, Mastercard and Paypal",
-        "We accept most major credit cards, and Paypal"
-      ]
+      "tag": "monastery_bongyong_ani_gonpa",
+      "patterns": ["Tell me about Bongyong Ani Gonpa", "Where is Bongyong Ani Gonpa?", "When was Bongyong Ani Gonpa built?"],
+      "responses": ["Bongyong Ani Gonpa is in East Sikkim. Established: 2005. More: https://en.wikipedia.org/wiki/Bongyong_Ani_Gonpa", "Bongyong Ani Gonpa — district: East Sikkim; established: 2005. See: https://en.wikipedia.org/wiki/Bongyong_Ani_Gonpa"]
     },
     {
-      "tag": "delivery",
-      "patterns": [
-        "How long does delivery take?",
-        "How long does shipping take?",
-        "When do I get my delivery?"
-      ],
-      "responses": [
-        "Delivery takes 2-4 days",
-        "Shipping takes 2-4 days"
-      ]
+      "tag": "monastery_burtuk_ugen_pemacholing_monastery",
+      "patterns": ["Tell me about Burtuk Ugen Pemacholing Monastery", "Where is Burtuk Ugen Pemacholing Monastery?", "When was Burtuk Ugen Pemacholing Monastery built?"],
+      "responses": ["Burtuk Ugen Pemacholing Monastery is in East Sikkim. Established: 2000. More: https://en.wikipedia.org/wiki/Burtuk_Ugen_Pemacholing_Monastery", "Burtuk Ugen Pemacholing Monastery — district: East Sikkim; established: 2000. See: https://en.wikipedia.org/wiki/Burtuk_Ugen_Pemacholing_Monastery"]
     },
     {
-      "tag": "funny",
-      "patterns": [
-        "Tell me a joke!",
-        "Tell me something funny!",
-        "Do you know a joke?"
-      ],
-      "responses": [
-        "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
-        "What did the buffalo say when his son left for college? Bison."
-      ]
+      "tag": "monastery_choten_monastery",
+      "patterns": ["Tell me about Choten Monastery", "Where is Choten Monastery?", "When was Choten Monastery built?"],
+      "responses": ["Choten Monastery is in East Sikkim. Established: 1946. More: https://en.wikipedia.org/wiki/Choten_Monastery", "Choten Monastery — district: East Sikkim; established: 1946. See: https://en.wikipedia.org/wiki/Choten_Monastery"]
+    },
+    {
+      "tag": "monastery_dichen_choling_monastery",
+      "patterns": ["Tell me about Dichen Choling Monastery", "Where is Dichen Choling Monastery?", "When was Dichen Choling Monastery built?"],
+      "responses": ["Dichen Choling Monastery is in East Sikkim. Established: 1987. More: https://en.wikipedia.org/wiki/Dichen_Choling_Monastery", "Dichen Choling Monastery — district: East Sikkim; established: 1987. See: https://en.wikipedia.org/wiki/Dichen_Choling_Monastery"]
+    },
+    {
+      "tag": "monastery_dolepchen_boudha_sanskrit_monastery",
+      "patterns": ["Tell me about Dolepchen Boudha Sanskrit Monastery", "Where is Dolepchen Boudha Sanskrit Monastery?", "When was Dolepchen Boudha Sanskrit Monastery built?"],
+      "responses": ["Dolepchen Boudha Sanskrit Monastery is in East Sikkim. Established: 1991. More: https://en.wikipedia.org/wiki/Dolepchen_Boudha_Sanskrit_Monastery", "Dolepchen Boudha Sanskrit Monastery — district: East Sikkim; established: 1991. See: https://en.wikipedia.org/wiki/Dolepchen_Boudha_Sanskrit_Monastery"]
+    },
+    {
+      "tag": "monastery_duchi_gyalton_monastery",
+      "patterns": ["Tell me about Duchi Gyalton Monastery", "Where is Duchi Gyalton Monastery?", "When was Duchi Gyalton Monastery built?"],
+      "responses": ["Duchi Gyalton Monastery is in East Sikkim. Established: 2002. More: https://en.wikipedia.org/wiki/Duchi_Gyalton_Monastery", "Duchi Gyalton Monastery — district: East Sikkim; established: 2002. See: https://en.wikipedia.org/wiki/Duchi_Gyalton_Monastery"]
+    },
+    {
+      "tag": "monastery_enchey_monastery",
+      "patterns": ["Tell me about Enchey Monastery", "Where is Enchey Monastery?", "When was Enchey Monastery built?"],
+      "responses": ["Enchey Monastery is in East Sikkim. Established: 1840. More: https://en.wikipedia.org/wiki/Enchey_Monastery", "Enchey Monastery — district: East Sikkim; established: 1840. See: https://en.wikipedia.org/wiki/Enchey_Monastery"]
+    },
+    {
+      "tag": "monastery_kagon_tshechhogling_monastery",
+      "patterns": ["Tell me about Kagon Tshechhogling Monastery", "Where is Kagon Tshechhogling Monastery?", "When was Kagon Tshechhogling Monastery built?"],
+      "responses": ["Kagon Tshechhogling Monastery is in East Sikkim. Established: 1977. More: https://en.wikipedia.org/wiki/Kagon_Tshechhogling_Monastery", "Kagon Tshechhogling Monastery — district: East Sikkim; established: 1977. See: https://en.wikipedia.org/wiki/Kagon_Tshechhogling_Monastery"]
+    },
+    {
+      "tag": "monastery_kathog_dorjeden_monastery",
+      "patterns": ["Tell me about Kathog Dorjeden Monastery", "Where is Kathog Dorjeden Monastery?", "When was Kathog Dorjeden Monastery built?"],
+      "responses": ["Kathog Dorjeden Monastery is in East Sikkim. Established: 1840. More: https://en.wikipedia.org/wiki/Kathog_Dorjeden_Monastery", "Kathog Dorjeden Monastery — district: East Sikkim; established: 1840. See: https://en.wikipedia.org/wiki/Kathog_Dorjeden_Monastery"]
+    },
+    {
+      "tag": "monastery_khatek_pema_choling_monastery",
+      "patterns": ["Tell me about Khatek Pema Choling Monastery", "Where is Khatek Pema Choling Monastery?", "When was Khatek Pema Choling Monastery built?"],
+      "responses": ["Khatek Pema Choling Monastery is in East Sikkim. Established: 1985. More: https://en.wikipedia.org/wiki/Khatek_Pema_Choling_Monastery", "Khatek Pema Choling Monastery — district: East Sikkim; established: 1985. See: https://en.wikipedia.org/wiki/Khatek_Pema_Choling_Monastery"]
+    },
+    {
+      "tag": "monastery_lingdok_tsangkhar_monastery",
+      "patterns": ["Tell me about Lingdok Tsangkhar Monastery", "Where is Lingdok Tsangkhar Monastery?", "When was Lingdok Tsangkhar Monastery built?"],
+      "responses": ["Lingdok Tsangkhar Monastery is in East Sikkim. Established: 1862. More: https://en.wikipedia.org/wiki/Lingdok_Tsangkhar_Monastery", "Lingdok Tsangkhar Monastery — district: East Sikkim; established: 1862. See: https://en.wikipedia.org/wiki/Lingdok_Tsangkhar_Monastery"]
+    },
+    {
+      "tag": "monastery_lingdum_zurmang_monastery",
+      "patterns": ["Tell me about Lingdum Zurmang Monastery", "Where is Lingdum Zurmang Monastery?", "When was Lingdum Zurmang Monastery built?"],
+      "responses": ["Lingdum Zurmang Monastery is in East Sikkim. Established: 1999. More: https://en.wikipedia.org/wiki/Lingdum_Zurmang_Monastery", "Lingdum Zurmang Monastery — district: East Sikkim; established: 1999. See: https://en.wikipedia.org/wiki/Lingdum_Zurmang_Monastery"]
+    },
+    {
+      "tag": "monastery_linkoed_monastery",
+      "patterns": ["Tell me about Linkoed Monastery", "Where is Linkoed Monastery?", "When was Linkoed Monastery built?"],
+      "responses": ["Linkoed Monastery is in East Sikkim. Established: 1840. More: https://en.wikipedia.org/wiki/Linkoed_Monastery", "Linkoed Monastery — district: East Sikkim; established: 1840. See: https://en.wikipedia.org/wiki/Linkoed_Monastery"]
+    },
+    {
+      "tag": "monastery_martam_namdzong",
+      "patterns": ["Tell me about Martam Namdzong", "Where is Martam Namdzong?", "When was Martam Namdzong built?"],
+      "responses": ["Martam Namdzong is in East Sikkim. Established: 1917. More: https://en.wikipedia.org/wiki/Martam_Namdzong", "Martam Namdzong — district: East Sikkim; established: 1917. See: https://en.wikipedia.org/wiki/Martam_Namdzong"]
+    },
+    {
+      "tag": "monastery_martam_tsangkhar_monastery",
+      "patterns": ["Tell me about Martam Tsangkhar Monastery", "Where is Martam Tsangkhar Monastery?", "When was Martam Tsangkhar Monastery built?"],
+      "responses": ["Martam Tsangkhar Monastery is in East Sikkim. Established: 1951. More: https://en.wikipedia.org/wiki/Martam_Tsangkhar_Monastery", "Martam Tsangkhar Monastery — district: East Sikkim; established: 1951. See: https://en.wikipedia.org/wiki/Martam_Tsangkhar_Monastery"]
+    },
+    {
+      "tag": "monastery_old_rumtek_monastery",
+      "patterns": ["Tell me about Old Rumtek Monastery", "Where is Old Rumtek Monastery?", "When was Old Rumtek Monastery built?"],
+      "responses": ["Old Rumtek Monastery is in East Sikkim. Established: 1734. More: https://en.wikipedia.org/wiki/Old_Rumtek_Monastery", "Old Rumtek Monastery — district: East Sikkim; established: 1734. See: https://en.wikipedia.org/wiki/Old_Rumtek_Monastery"]
+    },
+    {
+      "tag": "monastery_pabyuk_monastery",
+      "patterns": ["Tell me about Pabyuk Monastery", "Where is Pabyuk Monastery?", "When was Pabyuk Monastery built?"],
+      "responses": ["Pabyuk Monastery is in East Sikkim. Established: 1875. More: https://en.wikipedia.org/wiki/Pabyuk_Monastery", "Pabyuk Monastery — district: East Sikkim; established: 1875. See: https://en.wikipedia.org/wiki/Pabyuk_Monastery"]
+    },
+    {
+      "tag": "monastery_pandam_monastery",
+      "patterns": ["Tell me about Pandam Monastery", "Where is Pandam Monastery?", "When was Pandam Monastery built?"],
+      "responses": ["Pandam Monastery is in East Sikkim. Established: 1955. More: https://en.wikipedia.org/wiki/Pandam_Monastery", "Pandam Monastery — district: East Sikkim; established: 1955. See: https://en.wikipedia.org/wiki/Pandam_Monastery"]
+    },
+    {
+      "tag": "monastery_pathing_matsang_monastery",
+      "patterns": ["Tell me about Pathing Matsang Monastery", "Where is Pathing Matsang Monastery?", "When was Pathing Matsang Monastery built?"],
+      "responses": ["Pathing Matsang Monastery is in East Sikkim. Established: 1860. More: https://en.wikipedia.org/wiki/Pathing_Matsang_Monastery", "Pathing Matsang Monastery — district: East Sikkim; established: 1860. See: https://en.wikipedia.org/wiki/Pathing_Matsang_Monastery"]
+    },
+    {
+      "tag": "monastery_radong_tensung_monastery",
+      "patterns": ["Tell me about Radong Tensung Monastery", "Where is Radong Tensung Monastery?", "When was Radong Tensung Monastery built?"],
+      "responses": ["Radong Tensung Monastery is in East Sikkim. Established: 1959. More: https://en.wikipedia.org/wiki/Radong_Tensung_Monastery", "Radong Tensung Monastery — district: East Sikkim; established: 1959. See: https://en.wikipedia.org/wiki/Radong_Tensung_Monastery"]
+    },
+    {
+      "tag": "monastery_raloong_monastery",
+      "patterns": ["Tell me about Raloong Monastery", "Where is Raloong Monastery?", "When was Raloong Monastery built?"],
+      "responses": ["Raloong Monastery is in East Sikkim. Established: 1956. More: https://en.wikipedia.org/wiki/Raloong_Monastery", "Raloong Monastery — district: East Sikkim; established: 1956. See: https://en.wikipedia.org/wiki/Raloong_Monastery"]
+    },
+    {
+      "tag": "monastery_ray_mindu_katenling_monastery",
+      "patterns": ["Tell me about Ray Mindu Katenling Monastery", "Where is Ray Mindu Katenling Monastery?", "When was Ray Mindu Katenling Monastery built?"],
+      "responses": ["Ray Mindu Katenling Monastery is in East Sikkim. Established: 1873. More: https://en.wikipedia.org/wiki/Ray_Mindu_Katenling_Monastery", "Ray Mindu Katenling Monastery — district: East Sikkim; established: 1873. See: https://en.wikipedia.org/wiki/Ray_Mindu_Katenling_Monastery"]
+    },
+    {
+      "tag": "monastery_rinak_monastery",
+      "patterns": ["Tell me about Rinak Monastery", "Where is Rinak Monastery?", "When was Rinak Monastery built?"],
+      "responses": ["Rinak Monastery is in East Sikkim. Established: 1841. More: https://en.wikipedia.org/wiki/Rinak_Monastery", "Rinak Monastery — district: East Sikkim; established: 1841. See: https://en.wikipedia.org/wiki/Rinak_Monastery"]
+    },
+    {
+      "tag": "monastery_rumtek_dharma_chakra_centre",
+      "patterns": ["Tell me about Rumtek Dharma Chakra Centre", "Where is Rumtek Dharma Chakra Centre?", "When was Rumtek Dharma Chakra Centre built?"],
+      "responses": ["Rumtek Dharma Chakra Centre is in East Sikkim. Established: 1962. More: https://en.wikipedia.org/wiki/Rumtek_Dharma_Chakra_Centre", "Rumtek Dharma Chakra Centre — district: East Sikkim; established: 1962. See: https://en.wikipedia.org/wiki/Rumtek_Dharma_Chakra_Centre"]
+    },
+    {
+      "tag": "monastery_samdong_mintokgang_monastery",
+      "patterns": ["Tell me about Samdong Mintokgang Monastery", "Where is Samdong Mintokgang Monastery?", "When was Samdong Mintokgang Monastery built?"],
+      "responses": ["Samdong Mintokgang Monastery is in East Sikkim. Established: 1913. More: https://en.wikipedia.org/wiki/Samdong_Mintokgang_Monastery", "Samdong Mintokgang Monastery — district: East Sikkim; established: 1913. See: https://en.wikipedia.org/wiki/Samdong_Mintokgang_Monastery"]
+    },
+    {
+      "tag": "monastery_sang_monastery",
+      "patterns": ["Tell me about Sang Monastery", "Where is Sang Monastery?", "When was Sang Monastery built?"],
+      "responses": ["Sang Monastery is in East Sikkim. Established: 1912. More: https://en.wikipedia.org/wiki/Sang_Monastery", "Sang Monastery — district: East Sikkim; established: 1912. See: https://en.wikipedia.org/wiki/Sang_Monastery"]
+    },
+    {
+      "tag": "monastery_sangngor_monastery",
+      "patterns": ["Tell me about Sang-Ngor Monastery", "Where is Sang-Ngor Monastery?", "When was Sang-Ngor Monastery built?"],
+      "responses": ["Sang-Ngor Monastery is in East Sikkim. Established: 1961. More: https://en.wikipedia.org/wiki/Sang-Ngor_Monastery", "Sang-Ngor Monastery — district: East Sikkim; established: 1961. See: https://en.wikipedia.org/wiki/Sang-Ngor_Monastery"]
+    },
+    {
+      "tag": "monastery_simig_monastery",
+      "patterns": ["Tell me about Simig Monastery", "Where is Simig Monastery?", "When was Simig Monastery built?"],
+      "responses": ["Simig Monastery is in East Sikkim. Established: 1843. More: https://en.wikipedia.org/wiki/Simig_Monastery", "Simig Monastery — district: East Sikkim; established: 1843. See: https://en.wikipedia.org/wiki/Simig_Monastery"]
+    },
+    {
+      "tag": "monastery_singtam_monastery",
+      "patterns": ["Tell me about Singtam Monastery", "Where is Singtam Monastery?", "When was Singtam Monastery built?"],
+      "responses": ["Singtam Monastery is in East Sikkim. Established: 1992. More: https://en.wikipedia.org/wiki/Singtam_Monastery", "Singtam Monastery — district: East Sikkim; established: 1992. See: https://en.wikipedia.org/wiki/Singtam_Monastery"]
+    },
+    {
+      "tag": "monastery_sumon_thubten_gatsalling_monastery",
+      "patterns": ["Tell me about Sumon Thubten Gatsalling Monastery", "Where is Sumon Thubten Gatsalling Monastery?", "When was Sumon Thubten Gatsalling Monastery built?"],
+      "responses": ["Sumon Thubten Gatsalling Monastery is in East Sikkim. Established: 1924. More: https://en.wikipedia.org/wiki/Sumon_Thubten_Gatsalling_Monastery", "Sumon Thubten Gatsalling Monastery — district: East Sikkim; established: 1924. See: https://en.wikipedia.org/wiki/Sumon_Thubten_Gatsalling_Monastery"]
+    },
+    {
+      "tag": "monastery_taglung_domsumling_monastery",
+      "patterns": ["Tell me about Taglung Domsumling Monastery", "Where is Taglung Domsumling Monastery?", "When was Taglung Domsumling Monastery built?"],
+      "responses": ["Taglung Domsumling Monastery is in East Sikkim. Established: 1987. More: https://en.wikipedia.org/wiki/Taglung_Domsumling_Monastery", "Taglung Domsumling Monastery — district: East Sikkim; established: 1987. See: https://en.wikipedia.org/wiki/Taglung_Domsumling_Monastery"]
+    },
+    {
+      "tag": "monastery_taktse_ani_gonpa",
+      "patterns": ["Tell me about Taktse Ani Gonpa", "Where is Taktse Ani Gonpa?", "When was Taktse Ani Gonpa built?"],
+      "responses": ["Taktse Ani Gonpa is in East Sikkim. Established: 1980. More: https://en.wikipedia.org/wiki/Taktse_Ani_Gonpa", "Taktse Ani Gonpa — district: East Sikkim; established: 1980. See: https://en.wikipedia.org/wiki/Taktse_Ani_Gonpa"]
+    },
+    {
+      "tag": "monastery_thumon_monastery",
+      "patterns": ["Tell me about Thumon Monastery", "Where is Thumon Monastery?", "When was Thumon Monastery built?"],
+      "responses": ["Thumon Monastery is in East Sikkim. Established: 1921. More: https://en.wikipedia.org/wiki/Thumon_Monastery", "Thumon Monastery — district: East Sikkim; established: 1921. See: https://en.wikipedia.org/wiki/Thumon_Monastery"]
+    },
+    {
+      "tag": "monastery_tingkye_gonjang_monastery",
+      "patterns": ["Tell me about Tingkye Gonjang Monastery", "Where is Tingkye Gonjang Monastery?", "When was Tingkye Gonjang Monastery built?"],
+      "responses": ["Tingkye Gonjang Monastery is in East Sikkim. Established: 1981. More: https://en.wikipedia.org/wiki/Tingkye_Gonjang_Monastery", "Tingkye Gonjang Monastery — district: East Sikkim; established: 1981. See: https://en.wikipedia.org/wiki/Tingkye_Gonjang_Monastery"]
+    },
+    {
+      "tag": "monastery_tsangek_monastery",
+      "patterns": ["Tell me about Tsangek Monastery", "Where is Tsangek Monastery?", "When was Tsangek Monastery built?"],
+      "responses": ["Tsangek Monastery is in East Sikkim. Established: 1888. More: https://en.wikipedia.org/wiki/Tsangek_Monastery", "Tsangek Monastery — district: East Sikkim; established: 1888. See: https://en.wikipedia.org/wiki/Tsangek_Monastery"]
+    },
+    {
+      "tag": "monastery_tsulakhang_monastery",
+      "patterns": ["Tell me about Tsulakhang Monastery", "Where is Tsulakhang Monastery?", "When was Tsulakhang Monastery built?"],
+      "responses": ["Tsulakhang Monastery is in East Sikkim. Established: 1898. More: https://en.wikipedia.org/wiki/Tsulakhang_Monastery", "Tsulakhang Monastery — district: East Sikkim; established: 1898. See: https://en.wikipedia.org/wiki/Tsulakhang_Monastery"]
+    },
+    {
+      "tag": "monastery_karthok_monastery",
+      "patterns": ["Tell me about Karthok Monastery", "Where is Karthok Monastery?", "When was Karthok Monastery built?"],
+      "responses": ["Karthok Monastery — district: Unknown; established: Unknown. More: https://en.wikipedia.org/wiki/Karthok_Monastery", "Karthok Monastery — details unknown in dataset. See: https://en.wikipedia.org/wiki/Karthok_Monastery for more information."]
+    },
+    {
+      "tag": "monastery_rhenock_monastery",
+      "patterns": ["Tell me about Rhenock Monastery", "Where is Rhenock Monastery?", "When was Rhenock Monastery built?"],
+      "responses": ["Rhenock Monastery — district: Unknown; established: Unknown. More: https://en.wikipedia.org/wiki/Rhenock_Monastery", "Rhenock Monastery — details unknown in dataset. See: https://en.wikipedia.org/wiki/Rhenock_Monastery for more information."]
+    },
+    {
+      "tag": "monastery_simik_monastery",
+      "patterns": ["Tell me about Simik Monastery", "Where is Simik Monastery?", "When was Simik Monastery built?"],
+      "responses": ["Simik Monastery — district: Unknown; established: Unknown. More: https://en.wikipedia.org/wiki/Simik_Monastery", "Simik Monastery — details unknown in dataset. See: https://en.wikipedia.org/wiki/Simik_Monastery for more information."]
+    },
+
+    {
+      "tag": "monastery_barphog_monastery",
+      "patterns": ["Tell me about Barphog Monastery", "Where is Barphog Monastery?", "When was Barphog Monastery built?"],
+      "responses": ["Barphog Monastery is in North Sikkim. Established: 1957. More: https://en.wikipedia.org/wiki/Barphog_Monastery", "Barphog Monastery — district: North Sikkim; established: 1957. See: https://en.wikipedia.org/wiki/Barphog_Monastery"]
+    },
+    {
+      "tag": "monastery_gor_monastery",
+      "patterns": ["Tell me about Gor Monastery", "Where is Gor Monastery?", "When was Gor Monastery built?"],
+      "responses": ["Gor Monastery is in North Sikkim. Established: 2002. More: https://en.wikipedia.org/wiki/Gor_Monastery", "Gor Monastery — district: North Sikkim; established: 2002. See: https://en.wikipedia.org/wiki/Gor_Monastery"]
+    },
+    {
+      "tag": "monastery_hee_gyathang_monastery",
+      "patterns": ["Tell me about Hee Gyathang Monastery", "Where is Hee Gyathang Monastery?", "When was Hee Gyathang Monastery built?"],
+      "responses": ["Hee Gyathang Monastery is in North Sikkim. Established: 1914. More: https://en.wikipedia.org/wiki/Hee_Gyathang_Monastery", "Hee Gyathang Monastery — district: North Sikkim; established: 1914. See: https://en.wikipedia.org/wiki/Hee_Gyathang_Monastery"]
+    },
+    {
+      "tag": "monastery_kabi_monastery",
+      "patterns": ["Tell me about Kabi Monastery", "Where is Kabi Monastery?", "When was Kabi Monastery built?"],
+      "responses": ["Kabi Monastery is in North Sikkim. Established: 1911. More: https://en.wikipedia.org/wiki/Kabi_Monastery", "Kabi Monastery — district: North Sikkim; established: 1911. See: https://en.wikipedia.org/wiki/Kabi_Monastery"]
+    },
+    {
+      "tag": "monastery_labrang_monastery",
+      "patterns": ["Tell me about Labrang Monastery", "Where is Labrang Monastery?", "When was Labrang Monastery built?"],
+      "responses": ["Labrang Monastery is in North Sikkim. Established: 1844. More: https://en.wikipedia.org/wiki/Labrang_Monastery", "Labrang Monastery — district: North Sikkim; established: 1844. See: https://en.wikipedia.org/wiki/Labrang_Monastery"]
+    },
+    {
+      "tag": "monastery_lachen_monastery",
+      "patterns": ["Tell me about Lachen Monastery", "Where is Lachen Monastery?", "When was Lachen Monastery built?"],
+      "responses": ["Lachen Monastery is in North Sikkim. Established: 1858. More: https://en.wikipedia.org/wiki/Lachen_Monastery", "Lachen Monastery — district: North Sikkim; established: 1858. See: https://en.wikipedia.org/wiki/Lachen_Monastery"]
+    },
+    {
+      "tag": "monastery_lachen_thangu_monastery",
+      "patterns": ["Tell me about Lachen Thangu Monastery", "Where is Lachen Thangu Monastery?", "When was Lachen Thangu Monastery built?"],
+      "responses": ["Lachen Thangu Monastery is in North Sikkim. Established: 1947. More: https://en.wikipedia.org/wiki/Lachen_Thangu_Monastery", "Lachen Thangu Monastery — district: North Sikkim; established: 1947. See: https://en.wikipedia.org/wiki/Lachen_Thangu_Monastery"]
+    },
+    {
+      "tag": "monastery_lachung_monastery",
+      "patterns": ["Tell me about Lachung Monastery", "Where is Lachung Monastery?", "When was Lachung Monastery built?"],
+      "responses": ["Lachung Monastery is in North Sikkim. Established: 1850. More: https://en.wikipedia.org/wiki/Lachung_Monastery", "Lachung Monastery — district: North Sikkim; established: 1850. See: https://en.wikipedia.org/wiki/Lachung_Monastery"]
+    },
+    {
+      "tag": "monastery_lingthem_gonpa",
+      "patterns": ["Tell me about Lingthem Gonpa", "Where is Lingthem Gonpa?", "When was Lingthem Gonpa built?"],
+      "responses": ["Lingthem Gonpa is in North Sikkim. Established: 1857. More: https://en.wikipedia.org/wiki/Lingthem_Gonpa", "Lingthem Gonpa — district: North Sikkim; established: 1857. See: https://en.wikipedia.org/wiki/Lingthem_Gonpa"]
+    },
+    {
+      "tag": "monastery_malam_monastery",
+      "patterns": ["Tell me about Malam Monastery", "Where is Malam Monastery?", "When was Malam Monastery built?"],
+      "responses": ["Malam Monastery is in North Sikkim. Established: 1928. More: https://en.wikipedia.org/wiki/Malam_Monastery", "Malam Monastery — district: North Sikkim; established: 1928. See: https://en.wikipedia.org/wiki/Malam_Monastery"]
+    },
+    {
+      "tag": "monastery_nage_monastery",
+      "patterns": ["Tell me about Nage Monastery", "Where is Nage Monastery?", "When was Nage Monastery built?"],
+      "responses": ["Nage Monastery is in North Sikkim. Established: 1937. More: https://en.wikipedia.org/wiki/Nage_Monastery", "Nage Monastery — district: North Sikkim; established: 1937. See: https://en.wikipedia.org/wiki/Nage_Monastery"]
+    },
+    {
+      "tag": "monastery_phensang_monastery",
+      "patterns": ["Tell me about Phensang Monastery", "Where is Phensang Monastery?", "When was Phensang Monastery built?"],
+      "responses": ["Phensang Monastery is in North Sikkim. Established: 1721. More: https://en.wikipedia.org/wiki/Phensang_Monastery", "Phensang Monastery — district: North Sikkim; established: 1721. See: https://en.wikipedia.org/wiki/Phensang_Monastery"]
+    },
+    {
+      "tag": "monastery_phodong_monastery",
+      "patterns": ["Tell me about Phodong Monastery", "Where is Phodong Monastery?", "When was Phodong Monastery built?"],
+      "responses": ["Phodong Monastery is in North Sikkim. Established: 1734. More: https://en.wikipedia.org/wiki/Phodong_Monastery", "Phodong Monastery — district: North Sikkim; established: 1734. See: https://en.wikipedia.org/wiki/Phodong_Monastery"]
+    },
+    {
+      "tag": "monastery_ringyim_monastery",
+      "patterns": ["Tell me about Ringyim Monastery", "Where is Ringyim Monastery?", "When was Ringyim Monastery built?"],
+      "responses": ["Ringyim Monastery is in North Sikkim. Established: 1852. More: https://en.wikipedia.org/wiki/Ringyim_Monastery", "Ringyim Monastery — district: North Sikkim; established: 1852. See: https://en.wikipedia.org/wiki/Ringyim_Monastery"]
+    },
+    {
+      "tag": "monastery_shagyong_monastery",
+      "patterns": ["Tell me about Shagyong Monastery", "Where is Shagyong Monastery?", "When was Shagyong Monastery built?"],
+      "responses": ["Shagyong Monastery is in North Sikkim. Established: 1940. More: https://en.wikipedia.org/wiki/Shagyong_Monastery", "Shagyong Monastery — district: North Sikkim; established: 1940. See: https://en.wikipedia.org/wiki/Shagyong_Monastery"]
+    },
+    {
+      "tag": "monastery_ship_kunzang_choling_monastery",
+      "patterns": ["Tell me about Ship Kunzang Choling Monastery", "Where is Ship Kunzang Choling Monastery?", "When was Ship Kunzang Choling Monastery built?"],
+      "responses": ["Ship Kunzang Choling Monastery is in North Sikkim. Established: 1900. More: https://en.wikipedia.org/wiki/Ship_Kunzang_Choling_Monastery", "Ship Kunzang Choling Monastery — district: North Sikkim; established: 1900. See: https://en.wikipedia.org/wiki/Ship_Kunzang_Choling_Monastery"]
+    },
+    {
+      "tag": "monastery_silem_phagyal_monastery",
+      "patterns": ["Tell me about Silem Phagyal Monastery", "Where is Silem Phagyal Monastery?", "When was Silem Phagyal Monastery built?"],
+      "responses": ["Silem Phagyal Monastery is in North Sikkim. Established: 1967. More: https://en.wikipedia.org/wiki/Silem_Phagyal_Monastery", "Silem Phagyal Monastery — district: North Sikkim; established: 1967. See: https://en.wikipedia.org/wiki/Silem_Phagyal_Monastery"]
+    },
+    {
+      "tag": "monastery_singchit_ngadag_monastery",
+      "patterns": ["Tell me about Singchit Ngadag Monastery", "Where is Singchit Ngadag Monastery?", "When was Singchit Ngadag Monastery built?"],
+      "responses": ["Singchit Ngadag Monastery is in North Sikkim. Established: 1890. More: https://en.wikipedia.org/wiki/Singchit_Ngadag_Monastery", "Singchit Ngadag Monastery — district: North Sikkim; established: 1890. See: https://en.wikipedia.org/wiki/Singchit_Ngadag_Monastery"]
+    },
+    {
+      "tag": "monastery_sontam_tensung_monastery",
+      "patterns": ["Tell me about Sontam Tensung Monastery", "Where is Sontam Tensung Monastery?", "When was Sontam Tensung Monastery built?"],
+      "responses": ["Sontam Tensung Monastery is in North Sikkim. Established: 1884. More: https://en.wikipedia.org/wiki/Sontam_Tensung_Monastery", "Sontam Tensung Monastery — district: North Sikkim; established: 1884. See: https://en.wikipedia.org/wiki/Sontam_Tensung_Monastery"]
+    },
+    {
+      "tag": "monastery_tareng_gonpa",
+      "patterns": ["Tell me about Tareng Gonpa", "Where is Tareng Gonpa?", "When was Tareng Gonpa built?"],
+      "responses": ["Tareng Gonpa is in North Sikkim. Established: 1929. More: https://en.wikipedia.org/wiki/Tareng_Gonpa", "Tareng Gonpa — district: North Sikkim; established: 1929. See: https://en.wikipedia.org/wiki/Tareng_Gonpa"]
+    },
+    {
+      "tag": "monastery_tholung_monastery",
+      "patterns": ["Tell me about Tholung Monastery", "Where is Tholung Monastery?", "When was Tholung Monastery built?"],
+      "responses": ["Tholung Monastery is in North Sikkim. Established: 1789. More: https://en.wikipedia.org/wiki/Tholung_Monastery", "Tholung Monastery — district: North Sikkim; established: 1789. See: https://en.wikipedia.org/wiki/Tholung_Monastery"]
+    },
+    {
+      "tag": "monastery_tingbung_monastery",
+      "patterns": ["Tell me about Tingbung Monastery", "Where is Tingbung Monastery?", "When was Tingbung Monastery built?"],
+      "responses": ["Tingbung Monastery is in North Sikkim. Established: 1843. More: https://en.wikipedia.org/wiki/Tingbung_Monastery", "Tingbung Monastery — district: North Sikkim; established: 1843. See: https://en.wikipedia.org/wiki/Tingbung_Monastery"]
+    },
+    {
+      "tag": "monastery_tsawang_choling_monastery",
+      "patterns": ["Tell me about Tsawang Choling Monastery", "Where is Tsawang Choling Monastery?", "When was Tsawang Choling Monastery built?"],
+      "responses": ["Tsawang Choling Monastery is in North Sikkim. Established: 1936. More: https://en.wikipedia.org/wiki/Tsawang_Choling_Monastery", "Tsawang Choling Monastery — district: North Sikkim; established: 1936. See: https://en.wikipedia.org/wiki/Tsawang_Choling_Monastery"]
+    },
+    {
+      "tag": "monastery_tsungthang_monastery",
+      "patterns": ["Tell me about Tsungthang Monastery", "Where is Tsungthang Monastery?", "When was Tsungthang Monastery built?"],
+      "responses": ["Tsungthang Monastery is in North Sikkim. Established: 1788. More: https://en.wikipedia.org/wiki/Tsungthang_Monastery", "Tsungthang Monastery — district: North Sikkim; established: 1788. See: https://en.wikipedia.org/wiki/Tsungthang_Monastery"]
+    },
+    {
+      "tag": "monastery_chawayng_ani_monastery",
+      "patterns": ["Tell me about Chawayng Ani Monastery", "Where is Chawayng Ani Monastery?", "When was Chawayng Ani Monastery built?"],
+      "responses": ["Chawayng Ani Monastery — district: North Sikkim; established: Unknown. More: https://en.wikipedia.org/wiki/Chawayng_Ani_Monastery", "Chawayng Ani Monastery — details unknown in dataset. See: https://en.wikipedia.org/wiki/Chawayng_Ani_Monastery for more information."]
+    },
+
+    {
+      "tag": "monastery_ben_monastery",
+      "patterns": ["Tell me about Ben Monastery", "Where is Ben Monastery?", "When was Ben Monastery built?"],
+      "responses": ["Ben Monastery is in South Sikkim. Established: 1902. More: https://en.wikipedia.org/wiki/Ben_Monastery", "Ben Monastery — district: South Sikkim; established: 1902. See: https://en.wikipedia.org/wiki/Ben_Monastery"]
+    },
+    {
+      "tag": "monastery_bon_monastery",
+      "patterns": ["Tell me about Bon Monastery", "Where is Bon Monastery?", "When was Bon Monastery built?"],
+      "responses": ["Bon Monastery is in South Sikkim. Established: 1980. More: https://en.wikipedia.org/wiki/Bon_Monastery", "Bon Monastery — district: South Sikkim; established: 1980. See: https://en.wikipedia.org/wiki/Bon_Monastery"]
+    },
+    {
+      "tag": "monastery_bumtar_namdroling_monastery",
+      "patterns": ["Tell me about Bumtar Namdroling Monastery", "Where is Bumtar Namdroling Monastery?", "When was Bumtar Namdroling Monastery built?"],
+      "responses": ["Bumtar Namdroling Monastery is in South Sikkim. Established: 1939. More: https://en.wikipedia.org/wiki/Bumtar_Namdroling_Monastery", "Bumtar Namdroling Monastery — district: South Sikkim; established: 1939. See: https://en.wikipedia.org/wiki/Bumtar_Namdroling_Monastery"]
+    },
+    {
+      "tag": "monastery_burmiok_norbugang_monastery",
+      "patterns": ["Tell me about Burmiok Norbugang Monastery", "Where is Burmiok Norbugang Monastery?", "When was Burmiok Norbugang Monastery built?"],
+      "responses": ["Burmiok Norbugang Monastery is in South Sikkim. Established: 1992. More: https://en.wikipedia.org/wiki/Burmiok_Norbugang_Monastery", "Burmiok Norbugang Monastery — district: South Sikkim; established: 1992. See: https://en.wikipedia.org/wiki/Burmiok_Norbugang_Monastery"]
+    },
+    {
+      "tag": "monastery_doling_monastery",
+      "patterns": ["Tell me about Doling Monastery", "Where is Doling Monastery?", "When was Doling Monastery built?"],
+      "responses": ["Doling Monastery is in South Sikkim. Established: 1718. More: https://en.wikipedia.org/wiki/Doling_Monastery", "Doling Monastery — district: South Sikkim; established: 1718. See: https://en.wikipedia.org/wiki/Doling_Monastery"]
+    },
+    {
+      "tag": "monastery_gagyong_monastery",
+      "patterns": ["Tell me about Gagyong Monastery", "Where is Gagyong Monastery?", "When was Gagyong Monastery built?"],
+      "responses": ["Gagyong Monastery is in South Sikkim. Established: 2005. More: https://en.wikipedia.org/wiki/Gagyong_Monastery", "Gagyong Monastery — district: South Sikkim; established: 2005. See: https://en.wikipedia.org/wiki/Gagyong_Monastery"]
+    },
+    {
+      "tag": "monastery_kewzing_monastery",
+      "patterns": ["Tell me about Kewzing Monastery", "Where is Kewzing Monastery?", "When was Kewzing Monastery built?"],
+      "responses": ["Kewzing Monastery is in South Sikkim. Established: 1974. More: https://en.wikipedia.org/wiki/Kewzing_Monastery", "Kewzing Monastery — district: South Sikkim; established: 1974. See: https://en.wikipedia.org/wiki/Kewzing_Monastery"]
+    },
+    {
+      "tag": "monastery_linge_phagyal_monastery",
+      "patterns": ["Tell me about Linge Phagyal Monastery", "Where is Linge Phagyal Monastery?", "When was Linge Phagyal Monastery built?"],
+      "responses": ["Linge Phagyal Monastery is in South Sikkim. Established: 1862. More: https://en.wikipedia.org/wiki/Linge_Phagyal_Monastery", "Linge Phagyal Monastery — district: South Sikkim; established: 1862. See: https://en.wikipedia.org/wiki/Linge_Phagyal_Monastery"]
+    },
+    {
+      "tag": "monastery_malli_tashi_chodarling_monastery",
+      "patterns": ["Tell me about Malli Tashi Chodarling Monastery", "Where is Malli Tashi Chodarling Monastery?", "When was Malli Tashi Chodarling Monastery built?"],
+      "responses": ["Malli Tashi Chodarling Monastery is in South Sikkim. Established: 1915. More: https://en.wikipedia.org/wiki/Malli_Tashi_Chodarling_Monastery", "Malli Tashi Chodarling Monastery — district: South Sikkim; established: 1915. See: https://en.wikipedia.org/wiki/Malli_Tashi_Chodarling_Monastery"]
+    },
+    {
+      "tag": "monastery_mangbro_monastery",
+      "patterns": ["Tell me about Mangbro Monastery", "Where is Mangbro Monastery?", "When was Mangbro Monastery built?"],
+      "responses": ["Mangbro Monastery is in South Sikkim. Established: 1790. More: https://en.wikipedia.org/wiki/Mangbro_Monastery", "Mangbro Monastery — district: South Sikkim; established: 1790. See: https://en.wikipedia.org/wiki/Mangbro_Monastery"]
+    },
+    {
+      "tag": "monastery_namthang_norbu_tsho-ling_monastery",
+      "patterns": ["Tell me about Namthang Norbu Tsho-Ling Monastery", "Where is Namthang Norbu Tsho-Ling Monastery?", "When was Namthang Norbu Tsho-Ling Monastery built?"],
+      "responses": ["Namthang Norbu Tsho-Ling Monastery is in South Sikkim. Established: 1914. More: https://en.wikipedia.org/wiki/Namthang_Norbu_Tsho-Ling_Monastery", "Namthang Norbu Tsho-Ling Monastery — district: South Sikkim; established: 1914. See: https://en.wikipedia.org/wiki/Namthang_Norbu_Tsho-Ling_Monastery"]
+    },
+    {
+      "tag": "monastery_namthang_nyima_choling_monastery",
+      "patterns": ["Tell me about Namthang Nyima Choling Monastery", "Where is Namthang Nyima Choling Monastery?", "When was Namthang Nyima Choling Monastery built?"],
+      "responses": ["Namthang Nyima Choling Monastery is in South Sikkim. Established: 1997. More: https://en.wikipedia.org/wiki/Namthang_Nyima_Choling_Monastery", "Namthang Nyima Choling Monastery — district: South Sikkim; established: 1997. See: https://en.wikipedia.org/wiki/Namthang_Nyima_Choling_Monastery"]
+    },
+    {
+      "tag": "monastery_namtse_ahaley_monastery",
+      "patterns": ["Tell me about Namtse Ahaley Monastery", "Where is Namtse Ahaley Monastery?", "When was Namtse Ahaley Monastery built?"],
+      "responses": ["Namtse Ahaley Monastery is in South Sikkim. Established: 1948. More: https://en.wikipedia.org/wiki/Namtse_Ahaley_Monastery", "Namtse Ahaley Monastery — district: South Sikkim; established: 1948. See: https://en.wikipedia.org/wiki/Namtse_Ahaley_Monastery"]
+    },
+    {
+      "tag": "monastery_namtse_nga-dag_monastery",
+      "patterns": ["Tell me about Namtse Nga-Dag Monastery", "Where is Namtse Nga-Dag Monastery?", "When was Namtse Nga-Dag Monastery built?"],
+      "responses": ["Namtse Nga-Dag Monastery is in South Sikkim. Established: 1684. More: https://en.wikipedia.org/wiki/Namtse_Nga-Dag_Monastery", "Namtse Nga-Dag Monastery — district: South Sikkim; established: 1684. See: https://en.wikipedia.org/wiki/Namtse_Nga-Dag_Monastery"]
+    },
+    {
+      "tag": "monastery_parbing_monastery",
+      "patterns": ["Tell me about Parbing Monastery", "Where is Parbing Monastery?", "When was Parbing Monastery built?"],
+      "responses": ["Parbing Monastery is in South Sikkim. Established: 1935. More: https://en.wikipedia.org/wiki/Parbing_Monastery", "Parbing Monastery — district: South Sikkim; established: 1935. See: https://en.wikipedia.org/wiki/Parbing_Monastery"]
+    },
+    {
+      "tag": "monastery_rabong_kunphenling_tsechu_monastery",
+      "patterns": ["Tell me about Rabong Kunphenling Tsechu Monastery", "Where is Rabong Kunphenling Tsechu Monastery?", "When was Rabong Kunphenling Tsechu Monastery built?"],
+      "responses": ["Rabong Kunphenling Tsechu Monastery is in South Sikkim. Established: 1972. More: https://en.wikipedia.org/wiki/Rabong_Kunphenling_Tsechu_Monastery", "Rabong Kunphenling Tsechu Monastery — district: South Sikkim; established: 1972. See: https://en.wikipedia.org/wiki/Rabong_Kunphenling_Tsechu_Monastery"]
+    },
+    {
+      "tag": "monastery_rabong_monastery",
+      "patterns": ["Tell me about Rabong Monastery", "Where is Rabong Monastery?", "When was Rabong Monastery built?"],
+      "responses": ["Rabong Monastery is in South Sikkim. Established: 2006. More: https://en.wikipedia.org/wiki/Rabong_Monastery", "Rabong Monastery — district: South Sikkim; established: 2006. See: https://en.wikipedia.org/wiki/Rabong_Monastery"]
+    },
+    {
+      "tag": "monastery_ralong_monastery",
+      "patterns": ["Tell me about Ralong Monastery", "Where is Ralong Monastery?", "When was Ralong Monastery built?"],
+      "responses": ["Ralong Monastery is in South Sikkim. Established: 1730. More: https://en.wikipedia.org/wiki/Ralong_Monastery", "Ralong Monastery — district: South Sikkim; established: 1730. See: https://en.wikipedia.org/wiki/Ralong_Monastery"]
+    },
+    {
+      "tag": "monastery_ralong_palchen_choling_monastery",
+      "patterns": ["Tell me about Ralong Palchen Choling Monastery", "Where is Ralong Palchen Choling Monastery?", "When was Ralong Palchen Choling Monastery built?"],
+      "responses": ["Ralong Palchen Choling Monastery is in South Sikkim. Established: 1995. More: https://en.wikipedia.org/wiki/Ralong_Palchen_Choling_Monastery", "Ralong Palchen Choling Monastery — district: South Sikkim; established: 1995. See: https://en.wikipedia.org/wiki/Ralong_Palchen_Choling_Monastery"]
+    },
+    {
+      "tag": "monastery_sangmo_sharchog_bephug_monastery",
+      "patterns": ["Tell me about Sangmo Sharchog Bephug Monastery", "Where is Sangmo Sharchog Bephug Monastery?", "When was Sangmo Sharchog Bephug Monastery built?"],
+      "responses": ["Sangmo Sharchog Bephug Monastery is in South Sikkim. Established: 1921. More: https://en.wikipedia.org/wiki/Sangmo_Sharchog_Bephug_Monastery", "Sangmo Sharchog Bephug Monastery — district: South Sikkim; established: 1921. See: https://en.wikipedia.org/wiki/Sangmo_Sharchog_Bephug_Monastery"]
+    },
+    {
+      "tag": "monastery_serdup_choling_monastery",
+      "patterns": ["Tell me about Serdup Choling Monastery", "Where is Serdup Choling Monastery?", "When was Serdup Choling Monastery built?"],
+      "responses": ["Serdup Choling Monastery is in South Sikkim. Established: 1967. More: https://en.wikipedia.org/wiki/Serdup_Choling_Monastery", "Serdup Choling Monastery — district: South Sikkim; established: 1967. See: https://en.wikipedia.org/wiki/Serdup_Choling_Monastery"]
+    },
+    {
+      "tag": "monastery_sorok_tamang_monastery",
+      "patterns": ["Tell me about Sorok Tamang Monastery", "Where is Sorok Tamang Monastery?", "When was Sorok Tamang Monastery built?"],
+      "responses": ["Sorok Tamang Monastery is in South Sikkim. Established: 1962. More: https://en.wikipedia.org/wiki/Sorok_Tamang_Monastery", "Sorok Tamang Monastery — district: South Sikkim; established: 1962. See: https://en.wikipedia.org/wiki/Sorok_Tamang_Monastery"]
+    },
+    {
+      "tag": "monastery_suiram_risung_monastery",
+      "patterns": ["Tell me about Suiram Risung Monastery", "Where is Suiram Risung Monastery?", "When was Suiram Risung Monastery built?"],
+      "responses": ["Suiram Risung Monastery is in South Sikkim. Established: 1995. More: https://en.wikipedia.org/wiki/Suiram_Risung_Monastery", "Suiram Risung Monastery — district: South Sikkim; established: 1995. See: https://en.wikipedia.org/wiki/Suiram_Risung_Monastery"]
+    },
+    {
+      "tag": "monastery_tekling_dzokchen_monastery",
+      "patterns": ["Tell me about Tekling Dzokchen Monastery", "Where is Tekling Dzokchen Monastery?", "When was Tekling Dzokchen Monastery built?"],
+      "responses": ["Tekling Dzokchen Monastery is in South Sikkim. Established: 1936. More: https://en.wikipedia.org/wiki/Tekling_Dzokchen_Monastery", "Tekling Dzokchen Monastery — district: South Sikkim; established: 1936. See: https://en.wikipedia.org/wiki/Tekling_Dzokchen_Monastery"]
+    },
+    {
+      "tag": "monastery_wok_pabong_monastery",
+      "patterns": ["Tell me about Wok Pabong Monastery", "Where is Wok Pabong Monastery?", "When was Wok Pabong Monastery built?"],
+      "responses": ["Wok Pabong Monastery is in South Sikkim. Established: 1915. More: https://en.wikipedia.org/wiki/Wok_Pabong_Monastery", "Wok Pabong Monastery — district: South Sikkim; established: 1915. See: https://en.wikipedia.org/wiki/Wok_Pabong_Monastery"]
+    },
+    {
+      "tag": "monastery_yangang_changchub_tamu_monastery",
+      "patterns": ["Tell me about Yangang Changchub Tamu Monastery", "Where is Yangang Changchub Tamu Monastery?", "When was Yangang Changchub Tamu Monastery built?"],
+      "responses": ["Yangang Changchub Tamu Monastery is in South Sikkim. Established: 1982. More: https://en.wikipedia.org/wiki/Yangang_Changchub_Tamu_Monastery", "Yangang Changchub Tamu Monastery — district: South Sikkim; established: 1982. See: https://en.wikipedia.org/wiki/Yangang_Changchub_Tamu_Monastery"]
+    },
+    {
+      "tag": "monastery_yangang_gonpa",
+      "patterns": ["Tell me about Yangang Gonpa", "Where is Yangang Gonpa?", "When was Yangang Gonpa built?"],
+      "responses": ["Yangang Gonpa is in South Sikkim. Established: 1787. More: https://en.wikipedia.org/wiki/Yangang_Gonpa", "Yangang Gonpa — district: South Sikkim; established: 1787. See: https://en.wikipedia.org/wiki/Yangang_Gonpa"]
+    },
+    {
+      "tag": "monastery_namchi_monastery",
+      "patterns": ["Tell me about Namchi Monastery", "Where is Namchi Monastery?", "When was Namchi Monastery built?"],
+      "responses": ["Namchi Monastery — district: Unknown; established: Unknown. More: https://en.wikipedia.org/wiki/Namchi_Monastery", "Namchi Monastery — details unknown in dataset. See: https://en.wikipedia.org/wiki/Namchi_Monastery for more information."]
+    },
+    {
+      "tag": "monastery_tendong_gumpa",
+      "patterns": ["Tell me about Tendong Gumpa", "Where is Tendong Gumpa?", "When was Tendong Gumpa built?"],
+      "responses": ["Tendong Gumpa — district: Unknown; established: Unknown. More: https://en.wikipedia.org/wiki/Tendong_Gumpa", "Tendong Gumpa — details unknown in dataset. See: https://en.wikipedia.org/wiki/Tendong_Gumpa for more information."]
+    },
+
+    {
+      "tag": "monastery_aden_wolung_monastery",
+      "patterns": ["Tell me about Aden Wolung Monastery", "Where is Aden Wolung Monastery?", "When was Aden Wolung Monastery built?"],
+      "responses": ["Aden Wolung Monastery is in West Sikkim. Established: 1913. More: https://en.wikipedia.org/wiki/Aden_Wolung_Monastery", "Aden Wolung Monastery — district: West Sikkim; established: 1913. See: https://en.wikipedia.org/wiki/Aden_Wolung_Monastery"]
+    },
+    {
+      "tag": "monastery_chakung_monastery",
+      "patterns": ["Tell me about Chakung Monastery", "Where is Chakung Monastery?", "When was Chakung Monastery built?"],
+      "responses": ["Chakung Monastery is in West Sikkim. Established: 1847. More: https://en.wikipedia.org/wiki/Chakung_Monastery", "Chakung Monastery — district: West Sikkim; established: 1847. See: https://en.wikipedia.org/wiki/Chakung_Monastery"]
+    },
+    {
+      "tag": "monastery_dodak_tamu_monastery",
+      "patterns": ["Tell me about Dodak Tamu Monastery", "Where is Dodak Tamu Monastery?", "When was Dodak Tamu Monastery built?"],
+      "responses": ["Dodak Tamu Monastery is in West Sikkim. Established: 2005. More: https://en.wikipedia.org/wiki/Dodak_Tamu_Monastery", "Dodak Tamu Monastery — district: West Sikkim; established: 2005. See: https://en.wikipedia.org/wiki/Dodak_Tamu_Monastery"]
+    },
+    {
+      "tag": "monastery_dubde_monastery",
+      "patterns": ["Tell me about Dubde Monastery", "Where is Dubde Monastery?", "When was Dubde Monastery built?"],
+      "responses": ["Dubde Monastery is in West Sikkim. Established: 1647. More: https://en.wikipedia.org/wiki/Dubde_Monastery", "Dubde Monastery — district: West Sikkim; established: 1647. See: https://en.wikipedia.org/wiki/Dubde_Monastery"]
+    },
+    {
+      "tag": "monastery_hungri_monastery",
+      "patterns": ["Tell me about Hungri Monastery", "Where is Hungri Monastery?", "When was Hungri Monastery built?"],
+      "responses": ["Hungri Monastery is in West Sikkim. Established: 1922. More: https://en.wikipedia.org/wiki/Hungri_Monastery", "Hungri Monastery — district: West Sikkim; established: 1922. See: https://en.wikipedia.org/wiki/Hungri_Monastery"]
+    },
+    {
+      "tag": "monastery_khachoedpalri_monastery",
+      "patterns": ["Tell me about Khachoedpalri Monastery", "Where is Khachoedpalri Monastery?", "When was Khachoedpalri Monastery built?"],
+      "responses": ["Khachoedpalri Monastery is in West Sikkim. Established: 1760. More: https://en.wikipedia.org/wiki/Khachoedpalri_Monastery", "Khachoedpalri Monastery — district: West Sikkim; established: 1760. See: https://en.wikipedia.org/wiki/Khachoedpalri_Monastery"]
+    },
+    {
+      "tag": "monastery_lhuntse_monastery",
+      "patterns": ["Tell me about Lhuntse Monastery", "Where is Lhuntse Monastery?", "When was Lhuntse Monastery built?"],
+      "responses": ["Lhuntse Monastery is in West Sikkim. Established: 1850. More: https://en.wikipedia.org/wiki/Lhuntse_Monastery", "Lhuntse Monastery — district: West Sikkim; established: 1850. See: https://en.wikipedia.org/wiki/Lhuntse_Monastery"]
+    },
+    {
+      "tag": "monastery_melli-atsing_monastery",
+      "patterns": ["Tell me about Melli-Atsing Monastery", "Where is Melli-Atsing Monastery?", "When was Melli-Atsing Monastery built?"],
+      "responses": ["Melli-Atsing Monastery is in West Sikkim. Established: 1740. More: https://en.wikipedia.org/wiki/Melli-Atsing_Monastery", "Melli-Atsing Monastery — district: West Sikkim; established: 1740. See: https://en.wikipedia.org/wiki/Melli-Atsing_Monastery"]
+    },
+    {
+      "tag": "monastery_nubling_monastery",
+      "patterns": ["Tell me about Nubling Monastery", "Where is Nubling Monastery?", "When was Nubling Monastery built?"],
+      "responses": ["Nubling Monastery is in West Sikkim. Established: 1875. More: https://en.wikipedia.org/wiki/Nubling_Monastery", "Nubling Monastery — district: West Sikkim; established: 1875. See: https://en.wikipedia.org/wiki/Nubling_Monastery"]
+    },
+    {
+      "tag": "monastery_okhery_monastery",
+      "patterns": ["Tell me about Okhery Monastery", "Where is Okhery Monastery?", "When was Okhery Monastery built?"],
+      "responses": ["Okhery Monastery is in West Sikkim. Established: 1949. More: https://en.wikipedia.org/wiki/Okhery_Monastery", "Okhery Monastery — district: West Sikkim; established: 1949. See: https://en.wikipedia.org/wiki/Okhery_Monastery"]
+    },
+    {
+      "tag": "monastery_pemayangtse_monastery",
+      "patterns": ["Tell me about Pemayangtse Monastery", "Where is Pemayangtse Monastery?", "When was Pemayangtse Monastery built?"],
+      "responses": ["Pemayangtse Monastery is in West Sikkim. Established: 1650-1651. More: https://en.wikipedia.org/wiki/Pemayangtse_Monastery", "Pemayangtse Monastery — district: West Sikkim; established: 1650-1651. See: https://en.wikipedia.org/wiki/Pemayangtse_Monastery"]
+    },
+    {
+      "tag": "monastery_rinchen_choling_tamu_monastery",
+      "patterns": ["Tell me about Rinchen Choling Tamu Monastery", "Where is Rinchen Choling Tamu Monastery?", "When was Rinchen Choling Tamu Monastery built?"],
+      "responses": ["Rinchen Choling Tamu Monastery is in West Sikkim. Established: 1996. More: https://en.wikipedia.org/wiki/Rinchen_Choling_Tamu_Monastery", "Rinchen Choling Tamu Monastery — district: West Sikkim; established: 1996. See: https://en.wikipedia.org/wiki/Rinchen_Choling_Tamu_Monastery"]
+    },
+    {
+      "tag": "monastery_rinchenpung_monastery",
+      "patterns": ["Tell me about Rinchenpung Monastery", "Where is Rinchenpung Monastery?", "When was Rinchenpung Monastery built?"],
+      "responses": ["Rinchenpung Monastery is in West Sikkim. Established: 1730. More: https://en.wikipedia.org/wiki/Rinchenpung_Monastery", "Rinchenpung Monastery — district: West Sikkim; established: 1730. See: https://en.wikipedia.org/wiki/Rinchenpung_Monastery"]
+    },
+    {
+      "tag": "monastery_sanga_choeling_monastery",
+      "patterns": ["Tell me about Sanga Choeling Monastery", "Where is Sanga Choeling Monastery?", "When was Sanga Choeling Monastery built?"],
+      "responses": ["Sanga Choeling Monastery is in West Sikkim. Established: 1649-1650. More: https://en.wikipedia.org/wiki/Sanga_Choeling_Monastery", "Sanga Choeling Monastery — district: West Sikkim; established: 1649-1650. See: https://en.wikipedia.org/wiki/Sanga_Choeling_Monastery"]
+    },
+    {
+      "tag": "monastery_silnon_monastery",
+      "patterns": ["Tell me about Silnon Monastery", "Where is Silnon Monastery?", "When was Silnon Monastery built?"],
+      "responses": ["Silnon Monastery is in West Sikkim. Established: 1716. More: https://en.wikipedia.org/wiki/Silnon_Monastery", "Silnon Monastery — district: West Sikkim; established: 1716. See: https://en.wikipedia.org/wiki/Silnon_Monastery"]
+    },
+    {
+      "tag": "monastery_sri_badam_monastery",
+      "patterns": ["Tell me about Sri Badam Monastery", "Where is Sri Badam Monastery?", "When was Sri Badam Monastery built?"],
+      "responses": ["Sri Badam Monastery is in West Sikkim. Established: 1976. More: https://en.wikipedia.org/wiki/Sri_Badam_Monastery", "Sri Badam Monastery — district: West Sikkim; established: 1976. See: https://en.wikipedia.org/wiki/Sri_Badam_Monastery"]
+    },
+    {
+      "tag": "monastery_tashi_samboling_tamang_monastery",
+      "patterns": ["Tell me about Tashi Samboling Tamang Monastery", "Where is Tashi Samboling Tamang Monastery?", "When was Tashi Samboling Tamang Monastery built?"],
+      "responses": ["Tashi Samboling Tamang Monastery is in West Sikkim. Established: 1967. More: https://en.wikipedia.org/wiki/Tashi_Samboling_Tamang_Monastery", "Tashi Samboling Tamang Monastery — district: West Sikkim; established: 1967. See: https://en.wikipedia.org/wiki/Tashi_Samboling_Tamang_Monastery"]
+    },
+    {
+      "tag": "monastery_tashiding_monastery",
+      "patterns": ["Tell me about Tashiding Monastery", "Where is Tashiding Monastery?", "When was Tashiding Monastery built?"],
+      "responses": ["Tashiding Monastery is in West Sikkim. Established: 1651. More: https://en.wikipedia.org/wiki/Tashiding_Monastery", "Tashiding Monastery — district: West Sikkim; established: 1651. See: https://en.wikipedia.org/wiki/Tashiding_Monastery"]
+    },
+    {
+      "tag": "monastery_bermiok_monastery",
+      "patterns": ["Tell me about Bermiok Monastery", "Where is Bermiok Monastery?", "When was Bermiok Monastery built?"],
+      "responses": ["Bermiok Monastery is in West Sikkim. Established: 1873. More: https://en.wikipedia.org/wiki/Bermiok_Monastery", "Bermiok Monastery — district: West Sikkim; established: 1873. See: https://en.wikipedia.org/wiki/Bermiok_Monastery"]
     }
+
   ]
 }
